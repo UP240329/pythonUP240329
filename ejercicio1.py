@@ -31,3 +31,12 @@ circunference=2*pi*radio
 print("The area of circle is: ",area)
 print("The circunference of circle is: ",circunference)
 #8
+pendiente1=2#Definición de la pendiente
+intersecciónY=
+#9
+#10
+#11
+#12
+print(len('python'))>len('dragon')
+#13
+
