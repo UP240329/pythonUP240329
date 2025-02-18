@@ -32,7 +32,7 @@ print("The area of circle is: ",area)
 print("The circunference of circle is: ",circunference)
 #8
 pendiente1=2#Definición de la pendiente
-intersecciónY=
+intersecciónY=4
 #9
 #10
 #11
