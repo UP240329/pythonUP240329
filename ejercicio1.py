@@ -44,7 +44,7 @@ slope = (y2 - y1) / (x2 - x1)
 distance = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
 print("Slope: ",slope,"Distance: ", distance)
 #10
-print("Slopes are equal" if m == slope else "Slopes are different")
+print("Slopes are equal" if pendiente == slope else "Slopes are different")
 #11
 
 #12
