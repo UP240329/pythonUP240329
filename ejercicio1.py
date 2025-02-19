@@ -31,12 +31,23 @@ circunference=2*pi*radio
 print("The area of circle is: ",area)
 print("The circunference of circle is: ",circunference)
 #8
-pendiente1=2#Definición de la pendiente
-intersecciónY=4
-#9
+pendiente=2#Definición de la pendiente
+interseccionY=-2
+interseccionX=interseccionY/pendiente
+print("La pendiente de la recta es: ",pendiente, "\nLa intersección con el eje X es en: ",interseccionX,"\nLa intersección con el eje Y es: ")
+#9 Slope is (m = y2-y1/x2-x1). Find the slope 
+# and Euclidean distance between point (2, 2) and point (6,10)
+import math
+x1, y1 = 2, 2
+x2, y2 = 6, 10
+slope = (y2 - y1) / (x2 - x1)
+distance = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+print("Slope: ",slope,"Distance: ", distance)
 #10
+print("Slopes are equal" if m == slope else "Slopes are different")
 #11
+
 #12
-print(len('python'))>len('dragon')
+print(len('python')>len('dragon'))
 #13
 
