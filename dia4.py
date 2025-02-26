@@ -31,4 +31,50 @@ print(company.find('Coding'))
 print('Coding' in company)
 #Replace the word coding in the string 'Coding For All' to Python.
 print(company.replace('Coding','Python'))
+#Change Python for Everyone to Python for All using the replace method or other methods.
+companyy="Python for all"
+print(companyy.replace('Python','Everyone'))
+#Split the string 'Coding For All' using space as the separator (split()) 
+print(company.split())
+#"Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
+oracion="Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
+print(oracion.split(','))
+#What is the character at index 0 in the string Coding For All.
+print(company[0])
+#What is the last index of the string Coding For All.
+print(company[-1])
+#What character is at index 10 in "Coding For All" string.
+print(company[10])
+#Create an acronym or an abbreviation for the name 'Python For Everyone'.
+name="Python For Everyone"
+name=name.split()
+print(name[0][0]+name[1][0]+name[2][0])
+#Create an acronym or an abbreviation for the name 'Coding For All'.
+name="Coding For All"
+name=name.split()
+print(name[0][0]+name[1][0]+name[2][0])
+#Use index to determine the position of the first occurrence of C in Coding For All.
+print(company.index("C"))
+#Use index to determine the position of the first occurrence of F in Coding For All
+print(company.index("F"))
+#Use rfind to determine the position of the last occurrence of l in Coding For All People.
+oracion="Coding For All People"
+print(oracion.rfind("l"))
+#Use index or find to find the position of the first occurrence of the word 'because' in the following sentence:
+#  'You cannot end a sentence with because because because is a conjunction'
+example="You cannot end a sentence with because because because is a conjunction"
+example=example.split()
+print(example.index("because"))
+#Use rindex to find the position of the last occurrence of the word because in the following sentence: 
+# 'You cannot end a sentence with because because because is a conjunction'
+example="You cannot end a sentence with because because because is a conjunction"
+example=example.split()
+
+
+
+
+
+
+
+
 
