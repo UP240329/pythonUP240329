@@ -63,13 +63,16 @@ print(oracion.rfind("l"))
 #Use index or find to find the position of the first occurrence of the word 'because' in the following sentence:
 #  'You cannot end a sentence with because because because is a conjunction'
 example="You cannot end a sentence with because because because is a conjunction"
-example=example.split()
 print(example.index("because"))
 #Use rindex to find the position of the last occurrence of the word because in the following sentence: 
-print()
-
-
-
+print(example.rindex('because'))
+#Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+print(example[0:30]+example[54:71])
+#Does ''Coding For All' start with a substring Coding?
+subString="Coding"
+print(company.startswith(subString))
+#Does 'Coding For All' end with a substring coding?
+print(company.endswith('coding'))
 
 
 
