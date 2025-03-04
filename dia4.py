@@ -73,7 +73,36 @@ subString="Coding"
 print(company.startswith(subString))
 #Does 'Coding For All' end with a substring coding?
 print(company.endswith('coding'))
-
+#'   Coding For All      '  , remove the left and right trailing spaces in the given string.
+variable='   Coding For All   '
+print(variable.strip())
+#Which one of the following variables return True when we use the method isidentifier():
+#30DaysOfPython
+#thirty_days_of_python
+v1="30DaysOfPython"
+v2="thirty_days_of_python"
+print(v1.isidentifier())
+print(v2.isidentifier())
+#The following list contains the names of some of python libraries:
+librerias=['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+print('#'.join(librerias))
+#Use the new line escape sequence to separate the following sentences
+print('I am enjoying this challenge''\n''I just wonder what is next')
+#Use a tab escape sequence to write the following lines.
+print('Name'+'\t'+'Age'+'\t'+'Country'+'\t''City')
+print('Monica'+'\t'+'250'+'\t'+'Finland'+'\t''Helsinky')
+#Use the string formatting method to display the following:
+radius = 10
+area = 3.14 * radius ** 2
+#The area of a circle with radius 10 is 314 meters square.
+print('El área del circulo es: '+str(area))
+print("8 + 6 = {}".format(8+6))
+print("8 - 6 = {}".format(8-6))
+print("8 * 6 ={}".format(8*6))
+print("8 / 6 ={}".format(8/6))
+print("8 % 6 = {}".format(8 % 6))
+print("8//6={}".format(8//6) )
+print("8 ** 6 = {}".format(8**6))
 
 
 
