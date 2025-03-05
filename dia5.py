@@ -37,6 +37,56 @@ print(does_exist)
 #Sort the list using sort() method
 it_companies.sort() 
 print(it_companies)
-#
+#Reverse the list in descending order using reverse() method
+it_companies.reverse()
+print(it_companies)
+#Slice out the first 3 companies from the list
+print(it_companies[3:9])
+#Slice out the last 3 companies from the list
+print(it_companies[1:6])
+#Slice out the middle IT company or companies from the list
+print(it_companies[1:5]+ it_companies[6:9])
+#Remove the first IT company from the list
+del it_companies[0]
+print(it_companies)
+#Remove the middle IT company or companies from the list
+del it_companies[5]
+print(it_companies)
+#Remove the last IT company from the list
+it_companies.pop()
+print(it_companies)
+#Remove all IT companies from the list
+del it_companies
+
+#Destroy the IT companies list
+#it_companies.clear() 
+
+#Join the following lists:
+front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+back_end = ['Node','Express', 'MongoDB']
+lista=front_end+back_end
+print(lista)
+#After joining the lists in question 26. Copy the joined list and assign it to a variable full_stack,
+#  then insert Python and SQL after Redux.
+listaCopy=lista.copy()
+fullStack=listaCopy
+print(fullStack)
+fullStack.insert(5,'python')
+fullStack.insert(6,'SQL')
+print(fullStack)
+#LEVEL TWO
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+#Sort the list and find the min and max age
+ages.sort()
+print(ages[0],ages[len(ages)-1])
+#Add the min age and the max age again to the list
+ages.insert(0,19)
+ages.insert(-1,26)
+print(ages)
+# Find the median age (one middle item or two middle items divided by two)
+
+
+
+
 
 
