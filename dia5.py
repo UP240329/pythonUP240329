@@ -84,9 +84,21 @@ ages.insert(0,19)
 ages.insert(-1,26)
 print(ages)
 # Find the median age (one middle item or two middle items divided by two)
-
-
-
+mediana = (ages[4] + ages[5]) / 2
+print("La mediana es: ", mediana)
+#Find the average age (sum of all items divided by their number )
+promedio = sum(ages) / len(ages)
+print("El promedio es: ", promedio)
+#Find the range of the ages (max minus min)
+rango = ages[len(ages)-1] - ages[0]
+print("El rango de las edades es: ",rango)
+#Compare the value of (min - average) and (max - average), use abs() method
+comp=(ages[0]-promedio)and (ages[-1]-promedio)
+print("La comparación es: ", comp)
+#Find the middle country(ies) in the countries list
+import paises as p
+paises=p.countries
+print(len(paises))
 
 
 
