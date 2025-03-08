@@ -99,6 +99,22 @@ print("La comparación es: ", comp)
 import paises as p
 paises=p.countries
 print(len(paises))
+print(paises[85])
+print(paises[86])
+#Divide the countries list into two equal lists if it is even if not one more country for the first half.
+paises1=paises[0:85]
+paises2=paises[86:195]
+print(len(paises1))
+print(len(paises2))
+#['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']. Unpack the first three countries and the rest as scandic countries.
+paises=['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+pais1,pais2,pais3,*scandic=paises
+print(pais1)
+print(pais2)
+print(pais3)
+print(scandic)
+
+
 
 
 
