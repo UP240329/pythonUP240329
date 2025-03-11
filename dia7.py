@@ -27,5 +27,6 @@ print(A.intersection(B))
 print(A.issubset(B))
 #¿Son A y B conjuntos disjuntos?
 print(A.isdisjoint(B))
+#
 
 
