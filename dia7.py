@@ -18,7 +18,7 @@ print(it_companies)
 #Si usando remove() el item no se encuentra en el set, arrojará error
 #En cambio discard no arrojará nada
 
-#Nivel2
+#Nivel 2
 #Unir A y B
 print(A.union(B))
 #Encuentra A y B
@@ -27,6 +27,31 @@ print(A.intersection(B))
 print(A.issubset(B))
 #¿Son A y B conjuntos disjuntos?
 print(A.isdisjoint(B))
-#
+#Join A with B and B with A
+print(A.union(B))
+print(B.union(A))
+#What is the symmetric difference between A and B
+print(A.symmetric_difference(B) )
+#Delete the sets completely
+del A
 
+#Nivel 3
+#Convert the ages to a set and compare the length of the list and the set, which one is bigger?
+ageS = set(age) 
+print(age)
+print(len(ageS))
+print(len(age))
+comp=len(ageS)== len(age)
+print('El resultado de la comparación es: ',comp)
+#Explain the difference between the following data types: string, list, tuple and set
+#El tipo de dato String permite cualquier cadena de caracteres
+#Los Sets no permiten datos repetidos
+#En la tupla puedo añadir elementos, más no elimnarlos
+
+#I am a teacher and I love to inspire and teach people. 
+# How many unique words have been used in the sentence? Use the split methods and set to get the unique words.
+set={'I','am','a','teacher','and', 'I ','love'}
+set2={'to', 'inspire' ,'and','teach' ,'people'}
+comp=set.symmetric_difference(set2)
+print('Las palabras no repetidas son:',comp)
 
