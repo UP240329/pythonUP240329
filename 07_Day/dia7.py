@@ -55,3 +55,5 @@ set2={'to', 'inspire' ,'and','teach' ,'people'}
 comp=set.symmetric_difference(set2)
 print('Las palabras no repetidas son:',comp)
 
+#REVISADO
+print("Revisado")
