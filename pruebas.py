@@ -1,2 +1,3 @@
-company="coding for all"
-print(company[6:14])
+month=str(input('Enter a month:'))
+if month =='September' and month =='October' and month =='November':
+    print('Autumn')
