@@ -1,5 +1,5 @@
 fruits = ['banana', 'orange', 'mango', 'lemon']
-fruit=input('Enter a fruit')
+fruit=str(input('Enter a fruit'))
 if fruit in fruits:
     print('That fruit already exist in the list')
 else:
