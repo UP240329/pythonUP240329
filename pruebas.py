@@ -1,3 +1,7 @@
-month=str(input('Enter a month:'))
-if month =='September' and month =='October' and month =='November':
-    print('Autumn')
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruit=input('Enter a fruit')
+if fruit in fruits:
+    print('That fruit already exist in the list')
+else:
+    fruits.append(fruit)
+    print(fruits)
