@@ -71,9 +71,52 @@ else:
 #If a fruit doesn't exist in the list add the fruit to the list and print the modified list. '
 #'If the fruit exists print('That fruit already exist in the list')
 fruits = ['banana', 'orange', 'mango', 'lemon']
-fruit=input('Enter a fruit')
-if fruit in fruits:
+newFruit=str(input('Enter a fruit: '))
+if newFruit in fruits:
     print('That fruit already exist in the list')
 else:
-    fruits.append(fruit)
+    fruits.append(newFruit)
     print(fruits)
+#Level 3
+#Here we have a person dictionary. Feel free to modify it!
+person={
+    'first_name': 'Asabeneh',
+    'last_name': 'Yetayeh',
+    'age': 250,
+    'country': 'Finland',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
+    }
+    }
+#1 * Check if the person dictionary has skills key, if so print out the middle skill in the skills list.
+if 'skills' in person:
+    print(person['skills']   [len(person['skills'])//2])
+#2 Check if the person dictionary has skills key, if so check if the person has 'Python' skill 
+#and print out the result.
+    if 'Python' in person['skills']:
+        print(person['skills'])
+# #3  If a person skills has only JavaScript and React, print('He is a front end developer'), 
+# if the person skills has Node, Python, MongoDB, print('He is a backend developer'), 
+# if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), 
+# else print('unknown title') - for more accurate results more conditions can be nested!
+if 'skills' in person:
+    sk = person['skills']
+    if 'JavaScript'in sk or 'React' in sk:
+        print('He is a front end developer')
+    elif 'Node'in sk or 'Python' in sk or 'MongoDB'in sk:
+        print('He is a backend developer')
+    elif 'Node'in sk or 'React'in sk or 'MongoDB'in sk:
+        print('He is a fullstack developer')
+    else:
+        print('unknown title')
+
+#4 If the person is married and if he lives in Finland, print the information in the following format:
+#Asabeneh Yetayeh lives in Finland. He is married.
+if 'is_married' in person and 'country' in person:
+    if person['is_married'] == True and person['country']== 'Finland':
+        print({person["first_name"]} {person["last_name"]}' lives in Finland. She is married.')
+    else:
+        print({person["first_name"]} {person["last_name"]} 'lives in' {person["country"]}'.She is not married.')

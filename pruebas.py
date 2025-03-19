@@ -1,7 +1,13 @@
-fruits = ['banana', 'orange', 'mango', 'lemon']
-fruit=str(input('Enter a fruit'))
-if fruit in fruits:
-    print('That fruit already exist in the list')
-else:
-    fruits.append(fruit)
-    print(fruits)
+person={
+    'first_name': 'Asabeneh',
+    'last_name': 'Yetayeh',
+    'age': 250,
+    'country': 'Finland',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
+    }
+    }
+
