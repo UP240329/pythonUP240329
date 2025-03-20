@@ -116,6 +116,5 @@ if 'skills' in person:
 #4 If the person is married and if he lives in Finland, print the information in the following format:
 #Asabeneh Yetayeh lives in Finland. He is married.
 if person['is_married']== True and 'Finland' in person['country']:
-    print('Asabeneth Yetayeh lives in Finland, she is married')
-else:
-    print('NA')
+    print('Asabeneth Yetayeh lives in Finland, he is married')
+
