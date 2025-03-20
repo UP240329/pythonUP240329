@@ -104,19 +104,18 @@ if 'skills' in person:
 # else print('unknown title') - for more accurate results more conditions can be nested!
 if 'skills' in person:
     sk = person['skills']
-    if 'JavaScript'in sk or 'React' in sk:
+    if 'JavaScript'in sk and 'React' in sk:
         print('He is a front end developer')
-    elif 'Node'in sk or 'Python' in sk or 'MongoDB'in sk:
+    elif 'Node'in sk and 'Python' in sk and 'MongoDB'in sk:
         print('He is a backend developer')
-    elif 'Node'in sk or 'React'in sk or 'MongoDB'in sk:
+    elif 'Node'in sk and 'React'in sk and 'MongoDB'in sk:
         print('He is a fullstack developer')
     else:
         print('unknown title')
 
 #4 If the person is married and if he lives in Finland, print the information in the following format:
 #Asabeneh Yetayeh lives in Finland. He is married.
-if 'is_married' in person and 'country' in person:
-    if person['is_married'] == True and person['country']== 'Finland':
-        print({person["first_name"]} {person["last_name"]}' lives in Finland. She is married.')
-    else:
-        print({person["first_name"]} {person["last_name"]} 'lives in' {person["country"]}'.She is not married.')
+if person['is_married']== True and 'Finland' in person['country']:
+    print('Asabeneth Yetayeh lives in Finland, she is married')
+else:
+    print('NA')
