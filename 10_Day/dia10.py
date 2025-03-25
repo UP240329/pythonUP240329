@@ -94,7 +94,7 @@ from collections import Counter
 idiomas=Counter(idiomas)
 print('Los 10 idiomas más hablados son: ',idiomas.most_common(10))
 poblacion=[]
-for country in countries_data:
+for country in countriesData:
     poblacion.append(country['population'])
 poblacion.sort(reverse=True)
 print('Los 10 países más poblados son: ',poblacion[:10])
