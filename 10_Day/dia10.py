@@ -83,10 +83,10 @@ for fruta in reversed(frutas):
 #¿Cuál es el número total de idiomas en los datos?
 #Encuentre los diez idiomas más hablados a partir de los datos
 #Encuentra los 10 países más poblados del mundo
-from countriesData import countriesData
+from countriesData import countriesData as countries
 totalIdiomas=0
 idiomas=[]
-for country in countriesData:
+for country in countries:
     totalIdiomas=totalIdiomas+len(country['languages'])
     idiomas.extend(country['languages'])
 print('El total de idiomas es de ',totalIdiomas)
@@ -94,7 +94,7 @@ from collections import Counter
 idiomas=Counter(idiomas)
 print('Los 10 idiomas más hablados son: ',idiomas.most_common(10))
 poblacion=[]
-for country in countriesData:
+for country in countries:
     poblacion.append(country['population'])
 poblacion.sort(reverse=True)
 print('Los 10 países más poblados son: ',poblacion[:10])
