@@ -4,18 +4,25 @@ def add_two_numbers ():
     num_two = 3
     total = num_one + num_two
     print(total)
+add_two_numbers()
 #El área de un círculo se calcula de la siguiente manera: área = π x r x r. Escribe una función que calcule área_del_círculo .
-def areaCirculo(r):
-    return 3.1416*r*r
+def areaCirculo():
+    r=3
+    pi=3.1416
+    a=pi*r**2
+    print(a)
+areaCirculo()
 #Escriba una función llamada add_all_nums que tome cualquier número de argumentos y los sume. Compruebe si todos los elementos de la lista son de tipo numérico. De no ser así, proporcione una respuesta razonable.
-def addNums(*args):
+def add_all_nums([0,1,2,3,4,5]):    
     suma=0
-    for n in args:
-        if type(n)==int or type(n)==float:
-            suma=suma+n
+    for i in  range(1,6):
+        if type(i)==int:
+            print(suma)
+            suma+=i
         else:
-            return print('No todos los elementos son numéricos')
-        print(suma)
+            print('No todos los elementos son de tipo numérico')
+
+add_all_nums()
 #La temperatura en °C se puede convertir a °F usando esta fórmula: °F = (°C x 9/5) + 32. Escriba una función que convierta °C a °F, convert_celsius_to-fahrenheit .
 def convertCelsisuAFahrenheit(c):
     return (c*9/5)+32

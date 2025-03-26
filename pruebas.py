@@ -1,13 +1,6 @@
-person={
-    'first_name': 'Asabeneh',
-    'last_name': 'Yetayeh',
-    'age': 250,
-    'country': 'Finland',
-    'is_marred': True,
-    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
-    'address': {
-        'street': 'Space street',
-        'zipcode': '02210'
-    }
-    }
-
+def add_two_numbers ():
+    num_one = 2
+    num_two = 3
+    total = num_one + num_two
+    print(total)
+    add_two_numbers()
