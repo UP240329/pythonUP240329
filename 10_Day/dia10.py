@@ -69,42 +69,39 @@ for n in range(101):
         sumaImpar=sumaImpar+n
 print('La suma de todos los pares es de ',sumaPar,'. Y la suma de todos los impares es de ',sumaImpar)
 #Nivel3
-#Vaya a la carpeta de datos y use el archivo Countries.py . Recorra los países y extraiga todos los que contengan la palabra " land" 
-#en el nombre. Imprima el resultado
-from countries import countries
-for country in countries:
-    if 'land' in country:
-        print(country)
-#Esta es una lista de frutas, ['banana', 'naranja', 'mango', 'limón'] invierte el orden usando un bucle.
-frutas=['banana', 'naranja', 'mango', 'limón']
-for fruta in reversed(frutas):
-    print(fruta)
-#Vaya a la carpeta de datos y utilice el archivo Countries_data.py .
-#¿Cuál es el número total de idiomas en los datos?
+#Vaya a la carpeta de datos y utilice el archivo Countries_data.py
+import countriesData as datac 
+
+datos = datac.countries
+countrylanguage = []
+for pais in datos:
+    for lenguaje in pais['languages']:
+        countrylanguage.append(lenguaje)
+        
+print('La cantidades de lenguajes en countriesdata son: ', len(countrylanguage))
+
 #Encuentre los diez idiomas más hablados a partir de los datos
+
+setlanguages = set(countrylanguage)
+dictlanguages = {
+
+}
+for language in setlanguages:
+    dictlanguages[language] = 0
+
+print(dictlanguages)
+
+for idioma in dictlanguages:
+    for pais in datos:  
+         if idioma in pais['languages']:
+             dictlanguages[idioma] = pais['population'] + dictlanguages[idioma]
+
+sortValuesLanguagespopulation = sorted(dictlanguages.values(), reverse= True)
+sorfkeyslanguagespopulation = sorted(dictlanguages, key= dictlanguages.get, reverse=True)
+
+print( sorfkeyslanguagespopulation[1] ,sortValuesLanguagespopulation[1])
+
 #Encuentra los 10 países más poblados del mundo
-from countriesData import countriesData
-#¿Cuál es el número total de idiomas en los datos?
-idiomas=[]
-for country in countriesData:
-    idiomas.extend(country['languages'])
-print('El número total de idiomas es de ',len(idiomas))
-#Encuentre los diez idiomas más hablados a partir de los datos
-idiomas=[]
-for country in countriesData:
-    idiomas.extend(country['languages'])
-idiomasContados={}
-for idioma in idiomas:
-    if idioma in idiomasContados:
-        idiomasContados[idioma]+=1
-    else:
-        idiomasContados[idioma]=1
-idiomasContados=sorted(idiomasContados.items(),key=lambda x:x[1],reverse=True)
-print('Los diez idiomas más hablados son:')
-for idioma in idiomasContados[:10]:
-    print(idioma)
-#Encuentra los 10 países más poblados del mundo
-paisesContados=sorted(countriesData,key=lambda x:x['population'],reverse=True)
-print('Los diez países más poblados son:')
-for pais in paisesContados[:10]:
-    print(pais['name'])
+print('Los 10 idiomas mas hablados en el mundo son (orden decendente)')
+for i in range(10):
+    print(sorfkeyslanguagespopulation[i] ,sortValuesLanguagespopulation[i])
