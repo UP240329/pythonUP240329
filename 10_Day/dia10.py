@@ -22,12 +22,12 @@ for number in numbers:
   #####
   ######
   #######
-i=1
-while i<=7:
-    print("#"*i)
-    i=i+1
 for i in range(1,8):
     print("#"*i)
+#Utilice bucles anidados para crear lo siguiente:
+for j in range(m):
+    for i in range(n):
+        print("# ")
 #Imprima el siguiente patrón:
 #0 x 0 = 0
 #1 x 1 = 1
