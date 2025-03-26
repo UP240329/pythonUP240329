@@ -26,8 +26,8 @@ for i in range(8):
     print("#"*i)
 #Utilice bucles anidados para crear lo siguiente:
 sq=1
-for c in range(8)
-print(sq*8)
+for c in range(8):
+   print(sq*8)
 
 m=3
 n=4

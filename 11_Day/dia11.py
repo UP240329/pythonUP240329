@@ -1,6 +1,9 @@
 #Declare la función add_two_numbers . Esta función acepta dos parámetros y devuelve una suma.
-def addDosNum(a,b):
-    return a+b
+def add_two_numbers ():
+    num_one = 2
+    num_two = 3
+    total = num_one + num_two
+    print(total)
 #El área de un círculo se calcula de la siguiente manera: área = π x r x r. Escribe una función que calcule área_del_círculo .
 def areaCirculo(r):
     return 3.1416*r*r
