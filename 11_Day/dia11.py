@@ -71,5 +71,64 @@ def reverse_list(lista):
         listaInversa.append(lista[i])
     return listaInversa
 print(reverse_list(lista=[1,2,3,4,5]))
-
-
+#Declare una función llamada capitalize_list_items. Esta toma una lista como parámetro y devuelve una lista de elementos en mayúsculas
+def capitalizeListItems(lista):
+    listaMayusculas=[]
+    for elemento in lista:
+        listaMayusculas.append(elemento.upper())
+    return listaMayusculas
+print(capitalizeListItems(lista=['a','b','c','d','e']))
+#Declara una función llamada add_item. Esta toma como parámetros una lista y un elemento. Devuelve una lista con el elemento añadido al final.
+foodStaff = ['Potato', 'Tomato', 'Mango', 'Milk']
+numbers = [2, 3, 7, 9]
+def addItem(lista,elemento):
+    lista.append(elemento)
+    return lista
+print(addItem(foodStaff,'Meat'))
+print(addItem(numbers, 5))      
+#Declara una función llamada remove_item. Esta toma como parámetros una lista y un elemento. Devuelve una lista con el elemento eliminado.
+def removeItem(lista,elemento):
+    lista.remove(elemento)
+    return lista
+print(removeItem(foodStaff,'Mango'))
+#Declara una función llamada suma_de_números. Esta función toma un parámetro numérico y suma todos los números en ese rango.
+def sumaNumeros(num):
+    suma=0
+    for i in range(1,num+1):
+        suma=suma+i
+    return suma
+print(sumaNumeros(num=5))
+#Declara una función llamada suma_de_impares. Esta función toma un parámetro numérico y suma todos los números impares en ese rango.
+def sumaImpares(num):
+    suma=0
+    for i in range(1,num+1,2):
+        suma=suma+i
+    return suma
+print(sumaImpares(num=5))
+#Declara una función llamada suma_de_números_pares. Esta función toma un parámetro numérico y suma todos los números pares en ese rango.
+def sumaPares(num):
+    suma=0
+    for i in range(0,num+1,2):
+        suma=suma+i
+    return suma
+print(sumaPares(num=5))
+#Nivel2
+#Declare una función llamada evens_and_odds. Esta función toma un entero positivo como parámetro y cuenta el número de pares e impares en el número.
+def evensAndOdds(num):
+    par=0
+    impar=0
+    for i in range(1,num+1):
+        if i%2==0:
+            par=par+1
+        else:
+            impar=impar+1
+    return par,impar
+print(evensAndOdds(num=100))
+#Llama a tu función factorial, toma un número entero como parámetro y devuelve un factorial del número.
+def factorial(num):
+    factorial=1
+    for i in range(1,num+1):
+        factorial=factorial*i
+    return factorial
+print(factorial(num=5))
+#Llama a tu función is_empty , toma un parámetro y verifica si está vacío o no
