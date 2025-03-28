@@ -132,3 +132,86 @@ def factorial(num):
     return factorial
 print(factorial(num=5))
 #Llama a tu función is_empty , toma un parámetro y verifica si está vacío o no
+def isEmpty(parametro):
+    if len(parametro)==0:
+        return True
+    else:
+        return False
+print(isEmpty(parametro=[]))
+#Escriba diferentes funciones que acepten listas.
+# Estas funciones deben calcular la media, la mediana, la moda, el rango, la varianza y la desviación estándar (desviación estándar).
+def media(lista):
+    return sum(lista)/len(lista)
+print(media(lista=[1,2,3,4,5]))
+#Nivel 3
+#Escriba una función llamada is_prime, que verifique si un número es primo.
+def isPrime(num):
+    if num<2:
+        return False
+    for i in range(2,num):
+        if num%i==0:
+            return False
+    return True 
+print(isPrime(num=7))       
+#Escriba una función que verifique si todos los elementos son únicos en la lista.
+def uniqueList(lista):
+    for i in lista:
+        if lista.count(i)>1:
+            return False
+    return True
+print(uniqueList(lista=[1,2,3,4,5,5]))
+#Escriba una función que verifique si todos los elementos de la lista son del mismo tipo de datos.
+def sameType(lista):
+    tipo=type(lista[0])
+    for i in lista:
+        if type(i)!=tipo:
+            return False
+    return True
+print(sameType(lista=[1,2,3,4,5]))
+#Escriba una función que verifique si la variable proporcionada es una variable de Python válida
+def isPythonVariable(variable):
+    if variable.isidentifier():
+        return True
+    else:
+        return False
+print(isPythonVariable(variable='variable1'))
+#Vaya a la carpeta de datos y acceda al archivo Countries-data.py.
+#Crea una función llamada "los idiomas más hablados del mundo". Debería devolver los 10 o 20 idiomas más hablados del mundo en orden descendente.
+import countriesData as datac 
+datos = datac.countries
+countrylanguage = []
+
+def idiomasMasHablados():
+    for pais in datos:
+        for lenguaje in pais['languages']:
+            countrylanguage.append(lenguaje)
+            
+    setlanguages = set(countrylanguage)
+    dictlanguages = {
+    }
+    for language in setlanguages:
+        dictlanguages[language] = 0
+
+    for idioma in dictlanguages:
+        for pais in datos:  
+             if idioma in pais['languages']:
+                 dictlanguages[idioma] = pais['population'] + dictlanguages[idioma]
+
+    sortValuesLanguagespopulation = sorted(dictlanguages.values(), reverse= True)
+    sorfkeyslanguagespopulation = sorted(dictlanguages, key= dictlanguages.get, reverse=True)
+
+    return sorfkeyslanguagespopulation[:10],sortValuesLanguagespopulation[:10]
+print(idiomasMasHablados()) 
+#Crea una función llamada "los países más poblados". Debería devolver los 10 o 20 países más poblados en orden descendente.
+def paisesMasPoblados():
+    dictPoblacion = {
+    }
+    for pais in datos:
+        dictPoblacion[pais['name']] = pais['population']
+    
+    sortValuesPopulation = sorted(dictPoblacion.values(), reverse= True)
+    sorfkeysPopulation = sorted(dictPoblacion, key= dictPoblacion.get, reverse=True)
+
+    return sorfkeysPopulation[:10],sortValuesPopulation[:10]
+print(paisesMasPoblados())
+
