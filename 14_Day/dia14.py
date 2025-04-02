@@ -106,11 +106,61 @@ resultado = (
 print(resultado)
 #Declare una función llamada get_string_lists que toma una lista como parámetro y luego devuelve una lista que contiene solo elementos de cadena.
 lst=['Monica',2,3,20,'Upa']
-def string(lst):
-    if type==str in lst:
-        return True
-    return False
-print(list(filter(string, lst)))
+def get_string_lists(lst):
+    return [i for i in lst if isinstance(i, str)]
+print(get_string_lists(lst))
+#Utilice reducir para sumar todos los números en la lista de números.
+numbers = [1, 2, 3, 4, 5]
+def add(x, y):
+    return x + y
+total = reduce(add, numbers)
+print(total)
+#Utilice reduce para concatenar todos los países y producir esta oración:
+#  Estonia, Finlandia, Suecia, Dinamarca, Noruega e Islandia son países del norte de Europa.
+from functools import reduce
+paises = ["Estonia", "Finlandia", "Suecia", "Dinamarca", "Noruega", "Islandia"]
+def concatenar(x, y):
+    return x + ", " + y
+oracion = reduce(concatenar, paises)
+oracionFinal = oracion + " son países del norte de Europa."
+print(oracionFinal)
+#Declare una función llamada categorize_countries que devuelva una lista de países con algún patrón común 
+# (puede encontrar la lista de países en este repositorio como Countries.js (por ejemplo, 'land', 'ia', 'island', 'stan')).
+from paises import countries  
+def categorizeCountries(patterns):
+    categorized = {}
+    for pattern in patterns:
+        categorized[pattern] = [country for country in countries if pattern in country]
+    return categorized
+patterns = ['land', 'ia', 'island', 'stan']
+result = categorizeCountries(patterns)
+print(result)
+#Crea una función que devuelva un diccionario, donde las claves representan
+#  las letras iniciales de los países y los valores son la cantidad de nombres de países que comienzan con esa letra.
+from paises import countries
+def countI():
+    initialCount = {}
+    for country in countries:
+        initial = country[0].upper()
+        if initial not in initialCount:
+            initialCount[initial] = 1
+        else:
+            initialCount[initial] += 1
+    return initialCount
+initialCount = countI()
+print(initialCount)
+#Declare una función get_first_ten_countries: devuelve una lista de los primeros diez países de la lista Countries.js en la carpeta de datos.
+def First():
+    return countries[:10]
+FirstTen = First()
+print(FirstTen)
+#Declare una función get_last_ten_countries que devuelva los últimos diez países de la lista de países.
+
+
+
+
+
+
 
 
 
