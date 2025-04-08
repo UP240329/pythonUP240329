@@ -37,3 +37,4 @@ def slope_intercept(x1, y1, x2, y2):
     return slope, y_intercept
 print(slope_intercept(1, 2, 3, 4))
 
+print("Revisado")
