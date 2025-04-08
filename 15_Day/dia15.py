@@ -1,7 +1,7 @@
 print('Errores en Python, todos los programas tienen algún error')
 
 #Syntaxerror
-print('Pongame 10 profe'
+print('Pongame 10 profe (lo pensare)'
 #NameError
 print(monica)
 #IndexError
